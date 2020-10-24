@@ -9,6 +9,13 @@
     android:layout_margin="16dp"
     android:orientation="vertical">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="false"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/nav_logo_whiteout" />
+
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
@@ -33,4 +40,11 @@
         android:layout_weight="1"
         android:text="login"
         android:backgroundTint="@android:color/holo_blue_dark"/>
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:backgroundTint="@android:color/holo_green_light"/>
+
 </LinearLayout>

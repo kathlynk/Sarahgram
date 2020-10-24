@@ -9,12 +9,13 @@
     tools:context=".MainActivity"
     android:layout_margin="5dp">
 
-    <EditText
-        android:id="@+id/etDescription"
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Add a caption!"
-        android:ems="10"/>
+        android:adjustViewBounds="false"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/nav_logo_whiteout" />
+
     <Button
         android:id="@+id/btnCaptureImage"
         android:layout_width="match_parent"
@@ -25,10 +26,28 @@
         android:id="@+id/ivPostImage"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:background="#FFFFFF"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#2196F3"
+        android:ems="10"
+        android:hint="Add a caption!"
+        android:textAlignment="center" />
     <Button
         android:id="@+id/btnSumbit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit"/>
+        android:text="Post"/>
+
+    <Button
+        android:id="@+id/btnLogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foregroundTint="#773D3D"
+        android:text="Logout"
+        android:textColorLink="#FFFFFF" />
 </LinearLayout>
