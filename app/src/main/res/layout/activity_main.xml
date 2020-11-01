@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,45 +9,17 @@
     tools:context=".MainActivity"
     android:layout_margin="5dp">
 
-    <ImageView
+    <FrameLayout
+        android:id="@+id/flContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="false"
-        android:scaleType="centerInside"
-        app:srcCompat="@drawable/nav_logo_whiteout" />
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation"/>
 
-    <Button
-        android:id="@+id/btnCaptureImage"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
+        app:itemTextColor="@color/cardview_dark_background"
         android:layout_height="wrap_content"
-        android:text="Take Picture"/>
-
-    <ImageView
-        android:id="@+id/ivPostImage"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="#FFFFFF"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <EditText
-        android:id="@+id/etDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#2196F3"
-        android:ems="10"
-        android:hint="Add a caption!"
-        android:textAlignment="center" />
-    <Button
-        android:id="@+id/btnSumbit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Post"/>
-
-    <Button
-        android:id="@+id/btnLogOut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:foregroundTint="#773D3D"
-        android:text="Logout"
-        android:textColorLink="#FFFFFF" />
-</LinearLayout>
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_bottom_navigation" />
+</RelativeLayout>
