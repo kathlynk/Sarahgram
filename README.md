@@ -34,7 +34,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-img src="walkthrough1.gif" width=300><br>
+<img src="walkthrough1.gif" width=300><br>
 
 ## Notes
 
